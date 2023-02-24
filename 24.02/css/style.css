@@ -1,0 +1,47 @@
+.container {
+    display: block;
+    margin:0 auto;
+    border-radius: 8px;
+    background-color:navy;
+    width: 50em;
+    padding: 10px;
+}
+
+label {
+    font-size: 30px;
+    color: white;
+    text-align: justify;
+}
+input {
+    height: 30px;
+}
+
+.reset {
+    background-color: rgb(231, 12, 12); 
+    color: white;
+    float: right;
+}
+.submit {
+    background-color: lightgreen;
+    color: white;
+}
+.nome {
+    display: inline-block;
+}
+.email {
+    display: inline-block;
+}
+.telefone {
+    display: inline-block;
+}
+
+.url {
+    display: inline-block;
+}
+
+.numero {
+    display: inline-block;
+    
+}
+
+
