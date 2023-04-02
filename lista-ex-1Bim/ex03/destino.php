@@ -24,8 +24,8 @@
 
     <style>
         body {
-        background-color: <?= $color; ?>;           
-        color: <?= $text; ?>
+          color: <?= $text; ?>;
+          background-color: <?= $color; ?>;           
         }
     </style>
 

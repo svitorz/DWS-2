@@ -33,9 +33,9 @@
     <h2>Controles</h2>
 <div class="container py-3">
 Cor do textos dos parágrafos
-<a href="index.php?color=red&align=<?= $align ?>&size=<?= $size; ?>">Vermelho</a>     
-<a href="index.php?color=green&align=<?= $align ?>&size=<?= $size; ?>">Verde</a>     
-<a href="index.php?color=blue&align=<?= $align ?>&size=<?= $size; ?>">Azul</a>     
+<a href="index.php?color=coral&align=<?= $align ?>&size=<?= $size; ?>">Vermelho</a>     
+<a href="index.php?color=lightgreen&align=<?= $align ?>&size=<?= $size; ?>">Verde</a>     
+<a href="index.php?color=lightblue&align=<?= $align ?>&size=<?= $size; ?>">Azul</a>     
 
 </div>   
 <br>
@@ -49,9 +49,9 @@ Alinhamento dos textos dos parágrafos
 
 <div class="container py-3">
 Tamanho da fonte dos textos dos parágrafos
-<a href="index.php?color=<?= $color; ?>&align=<?= $align; ?>&size=small">Pequena</a>   
+<a href="index.php?color=<?= $color; ?>&align=<?= $align; ?>&size=smaller">Pequena</a>   
 <a href="index.php?color=<?= $color; ?>&align=<?= $align; ?>&size=medium">Média</a>   
-<a href="index.php?color=<?= $color; ?>&align=<?= $align; ?>&size=large">Grande</a>   
+<a href="index.php?color=<?= $color; ?>&align=<?= $align; ?>&size=larger">Grande</a>   
 </div>
 </div>
 
