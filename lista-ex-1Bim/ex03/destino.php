@@ -16,11 +16,11 @@
 ?>
 
     <h1>Exercício 3 - Lampada (maldita) liga/desliga com PHP</h1>
-    <a href="index.php?color=black&img=img/lampada.png&text=white">Apagar</a>
+      <a href="destino.php?color=black&img=img/lampada.png&text=white">Apagar</a>
     <div class="container d-flex justify-content-center">
         <img src= <?= $img; ?> >
-        </div>
-        <a href="index.php?color=white&img=img/lampada-acesa.png&text=black">Acender</a>
+    </div>
+        <a href="destino.php?color=white&img=img/lampada-acesa.png&text=black">Acender</a>
 
     <style>
         body {
