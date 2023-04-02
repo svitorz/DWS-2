@@ -16,18 +16,34 @@
 ?>
 
     <h1>Exercício 3 - Lampada (maldita) liga/desliga com PHP</h1>
-      <a href="destino.php?color=black&img=img/lampada.png&text=white">Apagar</a>
-    <div class="container d-flex justify-content-center">
-        <img src= <?= $img; ?> >
-    </div>
-        <a href="destino.php?color=white&img=img/lampada-acesa.png&text=black">Acender</a>
-
+     <!-- Definindo os botões e a imagem.  -->
+      <div class="container d-flex justify-content-center">
+        <a href="destino.php?color=black&img=img/lampada.png&text=white" class="link-offset-2 link-underline link-underline-opacity-0">
+        <button class="btn btn-dark btn-lg">
+            Apagar
+          </button>
+        </a>
+           <img src= <?= $img; ?> >
+           <a href="destino.php?color=white&img=img/lampada-acesa.png&text=black" class="link-offset-2 link-underline link-underline-opacity-0">
+       <button class="btn btn-light btn-lg">
+            Acender
+          </button>
+        </a>
+      </div>
+        <!-- CSS -->
     <style>
         body {
           color: <?= $text; ?>;
           background-color: <?= $color; ?>;           
         }
     </style>
+
+
+<div class="d-grid gap-2 col-6 mx-auto">
+        <a class="btn btn-primary" href="/lista-ex-1Bim">
+            Voltar á página inicial
+        </a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   </body>
