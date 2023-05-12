@@ -11,14 +11,17 @@
     <?php
     $val = filter_input(INPUT_GET, "val", FILTER_SANITIZE_SPECIAL_CHARS);  
     ?>
-    <h1 class="p-4 border-bottom">Exercício 1 - Calculadora</h1>
+    <h1 class="p-2 border-bottom">Exercício 1 - Calculadora</h1>
     
-    <?php 
+    <div class="container-fluid">
+        <?php 
     for($i = 0; $i<=10; $i++) {
         $rel = $i * $val;
-        echo("$val  x  $i = $rel <br>");
-        }       
+        echo("<p class='text-center fs-3'> $val  x  $i = $rel </p> <br>");
+    }       
     ?>
+    <a class="fs-4" href='index.php'>Voltar</a>
+</div>
 <script src="../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

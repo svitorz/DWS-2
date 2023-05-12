@@ -11,7 +11,7 @@
         $nota1 = filter_input(INPUT_POST, "nota1", FILTER_SANITIZE_SPECIAL_CHARS);
         $nota2 = filter_input(INPUT_POST, "nota2", FILTER_SANITIZE_EMAIL);
         $nota3 = filter_input(INPUT_POST, "nota3", FILTER_SANITIZE_SPECIAL_CHARS); 
-        $media = $nota1 + $nota2 + $nota3 / 3;
+        $media = ($nota1 + $nota2 + $nota3) / 3;
 
         if($media<4){
             $situacao = "REPROVADO";
@@ -19,7 +19,7 @@
         } else {
             if($media>=4 && $media<6){
                 $situacao = "EM RECUPERAÇÃO";
-                $cor = "#FF4500;";
+                $cor = "orange;";
             }else{
                 $situacao = "APROVADO";
                 $cor = "green;";
