@@ -27,6 +27,7 @@
         
     </div>
     <div class="row border-top p-4">
+        
     <?php
         for($i = 1; $i <= $num; $i++){
             echo("<div class='square bg-success text-light text-center align-center m-1'>$i</div>");
