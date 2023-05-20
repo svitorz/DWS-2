@@ -20,12 +20,13 @@
         <p class="text-light col-4"> Valor final: <?= $valor_final;?> </p>
         <p class="text-light col-4"> Valor incremento: <?= $valor_incremento;?> </p>
     </div>
+    <div class="container-fluid d-flex">
    <?php
 
     if($valor_inicial < $valor_final){
         for($i=$valor_inicial; $i<=$valor_final;$i+= $valor_incremento) {
          echo "
-         <p class='fs-5'>
+         <p class='fs-5 p-1'>
          $i
          </p>";
         }
@@ -38,6 +39,7 @@
         }
     }
    ?>
+   </div>
 <script src="../../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>    
 </body>
 </html>
