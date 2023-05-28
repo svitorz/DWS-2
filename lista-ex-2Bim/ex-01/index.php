@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
-</head>
-<body>
+<?php
+include("../header.php");
+?>
 <h1 class="p-3 border-bottom">Exercício 1: Ordenar númerosX:</h1>
 <div class="container-fluid py-5">
 <form action="destino.php" method="POST">
@@ -32,11 +25,6 @@
 </form>
 </div>
 
-<a href="../ex-01/index.php" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-block">Exercício 1:</a>
-<a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-block">Exercício 2:</a>
-<a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-block">Exercício 3:</a>
-<a href="" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover d-block">Exercício 4:</a>
-
-<script src="../../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php 
+include("../footer.php");
+?>

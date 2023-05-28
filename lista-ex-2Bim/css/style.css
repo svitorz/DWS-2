@@ -1,0 +1,20 @@
+.dobro{
+    border: 1px solid darkgreen;
+    background-color: lightgreen;
+    padding: 10px;
+}
+.triplo{
+    border: 1px solid darkred;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+.primo {
+    text-decoration: underline;
+    color: green;
+}
+
+.nao-primo {
+    text-decoration: underline;
+    color: red;
+}
