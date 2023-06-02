@@ -1,7 +1,7 @@
 <?php
 include("../header.php");
 ?>
-<h1 class="p-3 border-bottom">Exercício 1: Ordenar númerosX:</h1>
+<h1 class="p-3 border-bottom">Exercício 1: Ordenar números:</h1>
 <div class="container-fluid py-5">
 <form action="destino.php" method="POST">
     <div class="flex-row d-flex">
