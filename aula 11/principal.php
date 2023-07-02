@@ -49,7 +49,7 @@
                 $nova   = array("<span class='azul'>azul</span>", "<span class='vermelho'>vermelho</span>", "<span class='verde'>verde</span>");
                 $novafrase = str_replace($antiga, $nova, $texto);
                 //Criação de arquivo txt após cada inserção do usuário
-                $fp = fopen('data.txt', 'r+');
+                $fp = fopen('data.txt', 'a');
                 fwrite($fp, 'Texto: '. PHP_EOL);
                 fwrite($fp, $texto . PHP_EOL);
                 fwrite($fp, 'Hoje é ' . $dia . ' e agora são ' . $hora . PHP_EOL);
