@@ -83,13 +83,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="formulario.php">
+                            <a class="nav-link" aria-current="page" href="formulario-produto.php">
                                 <span data-feather="file-text"></span>
                                 Formulário
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="listagem.php">
+                            <a class="nav-link" aria-current="page" href="listagem-produto.php">
                                 <span data-feather="list"></span>
                                 Listagem
                             </a>

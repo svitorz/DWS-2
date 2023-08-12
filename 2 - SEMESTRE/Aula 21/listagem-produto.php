@@ -1,6 +1,11 @@
 <?php
 $titulo_pagina = "Listagem dos itens inseridos";
 require_once 'header.php';
+
+require 'conexao.php';
+
+$sql = "SELECT `id`,`nome`,`urlfoto`,`descricao` FROM `produtos` ORDER BY nome;";
+$stmt = $conn->query($sql);
 ?>
 
 <table class="table table-striped table-hover">
@@ -14,13 +19,16 @@ require_once 'header.php';
         </tr>
     </thead>
     <tbody>
+      <?php 
+      while($row = $stmt->fetch()){
+      ?>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea a fuga, aspernatur repellendus pariatur provident totam rerum, nemo inventore fugit incidunt molestiae nesciunt natus tenetur? Eveniet doloremque ab hic velit?</td>
+          <th scope="row"> <?= $row["id"]?> </th>
+          <td><?= $row["nome"]?></td>
+          <td><?= $row["descricao"]?></td>
           <td>
-            <a href="">
-              link
+            <a href="<?= $row["urlfoto"]?>">
+              LINK
             </a>
           </td>
           <td>
@@ -36,6 +44,9 @@ require_once 'header.php';
             </a>
           </td>
         </tr>
+        <?php 
+        }
+        ?>
     </tbody>
 </table>
 
