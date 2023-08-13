@@ -32,13 +32,13 @@ $stmt = $conn->query($sql);
             </a>
           </td>
           <td>
-            <a href="#" class=" btn btn-sm btn-danger">
+            <a href="excluir-produto.php?id=<?=$row['id'];?>" onclick="if(!confirm('Deseja excluir?')) return false;" class=" btn btn-sm btn-danger">
               <span data-feather="trash-2"></span>
                 Excluir 
             </a>
           </td>
           <td>
-            <a href="#" class="btn btn-sm btn-primary">
+            <a href="editar-produto.php?id=<?=$row['id'];?>" class="btn btn-sm btn-primary">
                 <span data-feather="edit"></span>
                 Editar
             </a>

@@ -21,7 +21,7 @@ require_once 'header.php';
         <button type="submit" class="btn btn-success">
             Enviar
         </button>
-          <button type="submit" class="btn btn-warning">
+          <button type="reset" class="btn btn-warning">
             Limpar
           </button>
         </div>

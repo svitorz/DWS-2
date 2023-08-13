@@ -30,10 +30,11 @@ if($result == true){
 </div>
 <?php
 }else {
+    $errorArray = $stmt->errorInfo();
 ?>
 <div class="alert alert-danger" role="alert">
-    <h4>Erro ao gravar dados!  </h4>
-    <p> <?= $stmt->error; ?> </p>
+    <h4>Erro ao gravar dados</h4>
+    <p><?= $errorArray[2]; ?></p>
 </div>
 <?php 
 }
