@@ -49,6 +49,9 @@
                     <a class="nav-link" href="listagem.php">Listagem</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="pagina-protegida.php">Página protegida</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn btn-light btn-sm btn-block font-1 my-1">Entrar</a>
                 </li>
                 <li class="nav-item">
@@ -58,11 +61,11 @@
         </div>
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start pe-3 d-none d-sm-block">
             <div class="text-end">
-                <a href="#" class="btn btn-light me-2">
+                <a href="form-login.php" class="btn btn-light me-2">
                     <span data-feather="log-in"></span>
                     Entrar
                 </a>
-                <a href="#" class="btn btn-danger me-2">
+                <a href="sair.php" class="btn btn-danger me-2">
                     <span data-feather="log-out"></span>
                     Sair
                 </a>
@@ -92,6 +95,12 @@
                             <a class="nav-link" aria-current="page" href="listagem-produto.php">
                                 <span data-feather="list"></span>
                                 Listagem
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="pagina-protegida.php">
+                                <span data-feather="lock"></span>
+                                Página protegida
                             </a>
                         </li>
                     </ul>

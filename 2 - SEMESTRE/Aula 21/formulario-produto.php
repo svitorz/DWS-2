@@ -1,6 +1,17 @@
 <?php
+
+session_start();
+
 $titulo_pagina = "Formulário de inserção de dados";
 require_once 'header.php';
+if(!isset($_SESSION["email"])){
+  ?>
+  <div class="alert alert-danger">
+      <h4>Esta é uma página protegida</h4>
+      <p>Você está tentando acessar conteúdo restrito.</p>
+  </div>    
+  <?php
+  }else{
 ?>
 <form action="inserir-produto.php" method="post">
 <div class="row">
@@ -29,5 +40,6 @@ require_once 'header.php';
 </div>
 </form>
 <?php
+  }
 require_once 'footer.php';
 ?>            
