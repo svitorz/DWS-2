@@ -1,4 +1,12 @@
 <?php
+session_start();
+require 'autenticacao.php';
+
+if(autenticado()){
+  redireciona();
+  die();
+}
+
 $titulo_pagina = "Identifique-se";
 require_once 'header.php';
 ?>

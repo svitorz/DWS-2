@@ -1,4 +1,8 @@
 <?php
+session_start();
+require 'autenticacao.php';
+
+
 $titulo_pagina = "Formulário de inserção de dados";
 require_once 'header.php';
 ?>

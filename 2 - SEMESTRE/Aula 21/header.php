@@ -29,6 +29,15 @@
     <link href="dist/dashboard.css" rel="stylesheet"/>
 </head>
 <body>
+    <?php 
+        if(!function_exists("autenticado")){
+            ?>
+            <br>
+            <h1>Atenção! Você esqueceu o require do arquivo <strong>autenticacao.php</strong>!</h1>
+            <?php 
+                die();    
+                } 
+            ?>
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
             Lojinha
@@ -46,7 +55,10 @@
                     <a class="nav-link" href="formulario.php">Formulário</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="listagem.php">Listagem</a>
+                    <a class="nav-link" href="listagem-produto.php">Listagem de produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listagem-usuario.php">Listagem de usuários</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pagina-protegida.php">Página protegida</a>
@@ -61,14 +73,32 @@
         </div>
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start pe-3 d-none d-sm-block">
             <div class="text-end">
-                <a href="form-login.php" class="btn btn-light me-2">
-                    <span data-feather="log-in"></span>
-                    Entrar
-                </a>
+                <?php if(!autenticado()){
+                    ?>
+                    <a href="formulario-usuarios.php" class="btn btn-info me-2">
+                        <span data-feather="user-plus"></span>
+                        Cadastrar
+                    </a>
+                    <a href="form-login.php" class="btn btn-light me-2">
+                        <span data-feather="log-in"></span>
+                        Entrar
+                    </a>
+                <?php    
+                } else { 
+                ?>
+                <span class="navbar-text">  
+                    <span data-feather="user"></span>
+                        <span class="fs-4 mx-2">
+                            <?= nome_usuario() ?>
+                        </span>
+                </span>
                 <a href="sair.php" class="btn btn-danger me-2">
                     <span data-feather="log-out"></span>
                     Sair
                 </a>
+                <?php
+                 } 
+                ?>
             </div>
         </div>
 

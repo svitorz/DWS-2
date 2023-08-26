@@ -1,4 +1,8 @@
 <?php
+session_start();
+require 'autenticacao.php';
+
+
 $titulo_pagina = "Página de alteração de produtos";
 require_once 'header.php';
 

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'autenticacao.php';
 $titulo_pagina = "Página destino da autênticação";
 require_once 'header.php';
 
@@ -8,12 +9,16 @@ require 'conexao.php';
 $email = filter_input(INPUT_POST,"email", FILTER_SANITIZE_EMAIL);
 $senha = filter_input(INPUT_POST, "senha", FILTER_SANITIZE_SPECIAL_CHARS);
 
-echo "<p>Nome: $nome";
+$sql = "SELECT `nome`,`senha` FROM `usuarios` WHERE email = ?";
+$stmt = $conn->prepare($sql);
+$stmt->execute([$email]);
 
-if($email == "vitor@gmail.com" && $senha = "123"){
+$row = $stmt->fetch();
+
+if(password_verify($senha, $row['senha'])){
     // Deu certo
     $_SESSION['email'] = $email;
-    $_SESSION['nome'] = "Vitor";
+    $_SESSION['nome'] = $row['nome'];
     ?>
 <div class="alert alert-success" role="alert">
     <h4>Autenticado com sucesso. </h4>

@@ -3,13 +3,13 @@ session_start();
 require 'autenticacao.php';
 
 
-$titulo_pagina = "Listagem dos itens inseridos";
+$titulo_pagina = "Listagem dos usuários";
 
 require_once 'header.php';
 
 require 'conexao.php';
 
-$sql = "SELECT `id`,`nome`,`urlfoto`,`descricao` FROM `produtos` ORDER BY nome;";
+$sql = "SELECT `id`,`nome`,`email` FROM `usuario` ORDER BY nome";
 $stmt = $conn->query($sql);
 ?>
 
@@ -17,9 +17,8 @@ $stmt = $conn->query($sql);
     <thead>
         <tr>
           <th scope="col" style="width: 5%;">ID</th>
-          <th scope="col" style="width: 15%;">Nome do Produto</th>
-          <th scope="col" style="width: 25%;">Descrição</th>
-          <th scope="col" style="width: 15%;">Link da imagem do produto</th>
+          <th scope="col" style="width: 15%;">Nome </th>
+          <th scope="col" style="width: 25%;">Email</th>
           <?php
           if(autenticado()){
           ?> 

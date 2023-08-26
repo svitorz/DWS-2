@@ -1,9 +1,17 @@
 <?php
 
 session_start();
+require 'autenticacao.php';
+
+if(!autenticado()){
+  $_SESSION['restrito'] = true;
+  redireciona();
+  die();
+}
 
 $titulo_pagina = "Formulário de inserção de dados";
 require_once 'header.php';
+
 if(!isset($_SESSION["email"])){
   ?>
   <div class="alert alert-danger">

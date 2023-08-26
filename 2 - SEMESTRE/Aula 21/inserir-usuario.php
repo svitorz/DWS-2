@@ -4,18 +4,18 @@ require 'autenticacao.php';
 
 
 $titulo_pagina = "Página de inserção de produtos inserção de dados";
-
 require_once 'header.php';
 
 require 'conexao.php';
 
 $nome = filter_input(INPUT_POST,"nome", FILTER_SANITIZE_SPECIAL_CHARS);
-$urlfoto = filter_input(INPUT_POST,"urlfoto", FILTER_SANITIZE_URL);
-$descricao = filter_input(INPUT_POST,"descricao", FILTER_SANITIZE_SPECIAL_CHARS);
+$email = filter_input(INPUT_POST,"email", FILTER_SANITIZE_EMAIL);
+$senha = filter_input(INPUT_POST,"senha");
+
+$senha_hash = password_hash($senha, PASSWORD_BCRYPT);
 
 echo "<p>Nome: $nome";
-echo "<p>Descrição: $descricao";
-echo "<p>Link:<a href='$urlfoto' target='_blank'> $urlfoto</a>";
+echo "<p>Email: $email";
 
 /**
  *  INSERT INTO `produtos`(`id`, `nome`, `urlfoto`, `descricao`) 
@@ -23,10 +23,10 @@ echo "<p>Link:<a href='$urlfoto' target='_blank'> $urlfoto</a>";
  * 
  */
 
-$sql = "INSERT INTO `produtos`(`nome`, `urlfoto`, `descricao`) VALUES (?,?,?)";
+$sql = "INSERT INTO `usuarios`(`nome`, `email`, `senha`) VALUES (?,?,?)";
 
 $stmt = $conn->prepare($sql);
-$result = $stmt->execute([$nome,$urlfoto,$descricao]);
+$result = $stmt->execute([$nome,$email,$senha_hash]);
 
 if($result == true){
 ?>
