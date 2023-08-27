@@ -58,9 +58,6 @@
                     <a class="nav-link" href="listagem-produto.php">Listagem de produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="listagem-usuario.php">Listagem de usuários</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="pagina-protegida.php">Página protegida</a>
                 </li>
                 <li class="nav-item">
